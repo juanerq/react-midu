@@ -4,6 +4,7 @@
   color: #fff;
   font-size: .8rem;
   justify-content: space-between;
+  width: 280px;
 }
 
 .tw-followCard-header {
@@ -15,6 +16,7 @@
 .tw-followCard-info {
   display: flex;
   flex-direction: column;
+  margin-left: 5px;
 }
 
 .tw-followCard-infoUserName {
@@ -38,10 +40,36 @@
   transition: .3s ease background-color;
 }
 
+.tw-followCard-text {
+  display: block;
+}
+
 .tw-followCard-button:hover {
-  background-color: rgb(162, 0, 255);
+  opacity: .8;
+}
+
+.tw-followCard-button.is-following {
+  border: 1px solid #bbb;
+  background: transparent;
+  color: #fff;
+  width: 130px;
 }
 
 .tw-followCard-button.is-following:hover {
-  background: red;
+  background: rgba(255, 0, 0, 0.160);
+  color: red;
+  border: 1px solid rgb(233, 0, 0);
+  transition: .2s ease all;
+}
+
+.tw-followCard-button.is-following:hover .tw-followCard-text {
+  display: none;
+}
+
+.tw-followCard-button.is-following:hover .tw-followCard-stopFollow {
+  display: block;
+}
+
+.tw-followCard-stopFollow {
+  display: none;
 }
